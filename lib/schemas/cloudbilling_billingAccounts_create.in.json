@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "properties": {
+        "access_token": {
+            "type": "string"
+        },
+        "alt": {
+            "type": "string",
+            "enum": [
+                "json",
+                "media",
+                "proto"
+            ],
+            "default": "json"
+        },
+        "callback": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A billing account in [GCP Console](https://console.cloud.google.com/).\nYou can assign a billing account to one or more projects.",
+            "properties": {
+                "displayName": {
+                    "description": "The display name given to the billing account, such as `My Billing\nAccount`. This name is displayed in the GCP Console.",
+                    "type": "string"
+                },
+                "masterBillingAccount": {
+                    "description": "If this account is a\n[subaccount](https://cloud.google.com/billing/docs/concepts), then this\nwill be the resource name of the master billing account that it is being\nresold through.\nOtherwise this will be empty.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The resource name of the billing account. The resource name has the form\n`billingAccounts/{billing_account_id}`. For example,\n`billingAccounts/012345-567890-ABCDEF` would be the resource name for\nbilling account `012345-567890-ABCDEF`.",
+                    "type": "string"
+                },
+                "open": {
+                    "description": "True if the billing account is open, and will therefore be charged for any\nusage on associated projects. False if the billing account is closed, and\ntherefore projects associated with it will be unable to use paid services.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "__xgafv": {
+            "type": "string",
+            "enum": [
+                "1",
+                "2"
+            ]
+        }
+    }
+}
